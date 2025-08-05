@@ -4,7 +4,7 @@ from redis import Redis
 import requests
 
 app = Flask(__name__)
-redis = Redis(host="redis", port=6379, decode_responses=True)
+redis = Redis(host="localhost", port=6379, decode_responses=True)
 
 WEATHER_URL = "https://api.open-meteo.com/v1/forecast"
 LAT       = os.getenv("LAT", "-22.2758")           # Nouméa
